@@ -5,7 +5,7 @@ let heroesList = require("../data/heroes.json")
 
 /* GET heroes page. */
 router.get('/', function(req, res, next) {
-  res.render("heroes", {title: "Heroes", h :heroesList}); 
+  res.send(heroesList); 
 });
 
 module.exports = router;
