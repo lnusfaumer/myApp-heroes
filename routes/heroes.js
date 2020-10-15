@@ -1,11 +1,17 @@
 var express = require('express');
 var router = express.Router();
 
-let heroesList = require("../data/heroes.json")
+let heroesController = require('../controllers/heroesController.js')
+
 
 /* GET heroes page. */
-router.get('/', function(req, res, next) {
-  res.send(heroesList); 
-});
+router.get('/', heroesController.rutaInicial );
+
+router.get('/:id/profesion', heroesController.idProfesion )
+
+router.get('/:id/resenia/:tipo', heroesController.idResenia )
+
+
+
 
 module.exports = router;
