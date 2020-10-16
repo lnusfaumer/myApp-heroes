@@ -5,11 +5,15 @@ let heroesController = require('../controllers/heroesController.js')
 
 
 /* GET heroes page. */
-router.get('/', heroesController.rutaInicial );
+router.get('/', heroesController.rutaInicio );
 
 router.get('/:id/profesion', heroesController.idProfesion )
 
 router.get('/:id/resenia/:tipo', heroesController.idResenia )
+
+router.get('/creditos', heroesController.creditos )
+
+
 
 
 
